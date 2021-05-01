@@ -23,6 +23,7 @@ allprojects {
 
     ext {
         guava_version = "30.1-jre"
+        testcontainers_version = "1.14.3"
     }
 
     apply plugin: "io.spring.dependency-management"
@@ -32,6 +33,8 @@ allprojects {
         }
         dependencies {
             dependency("com.google.guava:guava:$guava_version")
+            dependency("org.testcontainers:junit-jupiter:$testcontainers_version")
+            dependency("org.testcontainers:postgresql:$testcontainers_version")
         }
     }
 
